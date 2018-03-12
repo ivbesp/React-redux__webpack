@@ -1,5 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const extractSass = new ExtractTextPlugin({
+    filename: "./css/style.css",
+});
 
 module.exports = {
     entry: [
@@ -18,11 +23,27 @@ module.exports = {
                 exclude: /node_modules/,
                 use: ['babel-loader']
 
+            },
+            {
+                test: /\.(scss)$/,
+                use: extractSass.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        {
+                        loader: "css-loader"
+                    },
+                        {
+                        loader: "sass-loader"
+                    }]
+                })
             }
         ]
     },
     plugins: [
+        extractSass,
         new webpack.HotModuleReplacementPlugin()
+
+
     ],
     resolve: {
         extensions: ['*', '.js', '.jsx']
@@ -30,5 +51,5 @@ module.exports = {
     devServer: {
         contentBase: './public',
         hot: true
-    }
+    },
 };

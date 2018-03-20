@@ -9,7 +9,7 @@ const extractSass = new ExtractTextPlugin({
 module.exports = {
     entry: [
         'react-hot-loader/patch',
-        './src/app/index.js'
+        './src/index.js'
         ],
     output: {
         path: __dirname + '/public',

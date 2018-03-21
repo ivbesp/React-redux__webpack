@@ -1,9 +1,9 @@
 import { createStore , combineReducers } from 'redux';
-import * as reducers from './../reducers';
+import rootReducer from './../reducers/index';
 
 export default function configureStore(initialState) {
     const store = createStore(
-        combineReducers(reducers),
+        rootReducer,
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
         initialState);
 

@@ -3,20 +3,11 @@ import ReactDOM from 'react-dom';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import './scss/style.scss';
-
-//Reducers
-import * as reducers from './reducers';
-
-//Store
-const store = createStore(
-    combineReducers(reducers),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
-
+import configureStore from './store/configureStore';
 import App from './containers/App';
 import Home from './containers/Home';
 
-
+const store = configureStore();
 
 ReactDOM.render(
     <Provider store={store}>

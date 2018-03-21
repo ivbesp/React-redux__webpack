@@ -14,8 +14,8 @@ export const categories = (state = InitialState.categories, action) => {
             return state.concat(
                 {
                     id: action.id,
-                    category_name: action.name,
-                    category_enc: action.enc,
+                    name: action.name,
+                    anchor_link: action.enc,
                     temp: action.temp
                 }
             );

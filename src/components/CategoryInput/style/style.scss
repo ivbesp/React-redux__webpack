@@ -1,5 +1,11 @@
 .category-input {
   border  : 1px solid blue;
-  padding : 10px;
+  padding : 0 10px 10px 10px;
   margin  : 10px;
+}
+
+.category-input__title{
+  font-size     : 14px;
+  color         : blue;
+  margin-bottom : 5px;
 }

@@ -4,16 +4,29 @@ const InitialState = {
         [
             {
                 id              : 1,
-                category_name   :'Продукты',
-                category_enc    :'#products',
+                name            :'Продукты питания',
+                anchor_link     :'products',
                 temp            : true
             },
             {
                 id              : 2,
-                category_name   :'Магазины',
-                category_enc    :'#shops',
+                name            :'Инструменты',
+                anchor_link     :'tools',
+                temp            : false
+            },
+            {
+                id              : 3,
+                name            :'Автомобили',
+                anchor_link     :'automobiles',
+                temp            : true
+            },
+            {
+                id              : 4,
+                name            :'Расходные материалы',
+                anchor_link     :'consumables',
                 temp            : false
             }
+
         ]
 };
 export default InitialState;

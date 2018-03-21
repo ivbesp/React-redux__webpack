@@ -26,7 +26,7 @@ class Home extends Component {
         return (
 
             <div className='home'>
-                <h2>Home page</h2>
+                <div className='home__title'>Home container</div>
                 <CategoriesList {...this.props}/>
                 <CategoryInput {...this.props}/>
             </div>

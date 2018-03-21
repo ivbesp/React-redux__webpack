@@ -4,18 +4,16 @@ import './style/style.scss';
 
 const CategoriesList = ({categories}) => (
     <div className="categories-list">
-        <p>CategoriesList</p>
+        <div className='categories-list__title'>CategoriesList component</div>
         <div>
-            <h1>КАТЕГОРИИ</h1>
-
             <h2>Активные:</h2>
-            <div>
+            <div className='categories-list__list'>
                 {categories.map((item, i) =>{
                         if (item.temp){
                             return (
-                                <div key={i}>
+                                <div id={item.anchor_link} key={i}>
                             <span>
-                                <b>{item.category_name}</b> — {item.category_enc}
+                                <b>{item.name}</b> — <a href={'#'+item.anchor_link}>{'#'+item.anchor_link}</a>
                             </span>
                                 </div>
 
@@ -26,13 +24,13 @@ const CategoriesList = ({categories}) => (
             </div>
 
             <h2>Неактивные:</h2>
-            <div>
+            <div className='categories-list__list'>
                 {categories.map((item, i) =>{
                         if (!item.temp){
                             return (
                                 <div key={i} className="b-category">
                             <span>
-                                <b>{item.category_name}</b> — {item.category_enc}
+                                <b>{item.name}</b> — <a href={'#'+item.anchor_link}>{'#'+item.anchor_link}</a>
                             </span>
                                 </div>
                             )

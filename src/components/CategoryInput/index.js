@@ -21,7 +21,8 @@ class CategoryInput extends Component{
     }
     render(){
         return(
-            <div className="category-input">
+            <div className='category-input'>
+                <div className='category-input__title'>CategoryInput component</div>
                 <p>
                     <label>Название категории<br/>
                         <input ref="category_add" size="20" type="text" defaultValue="" />

@@ -1,13 +1,6 @@
-import InitialState from './initialstate';
+import InitialState from './../initialstate';
 
-/*
-* Reducers
-* */
-
-
-//categories reducer
-
-export const categories = (state = InitialState.categories, action) => {
+const categories = (state = InitialState.categories, action) => {
     let obj={};
     switch(action.type) {
         case 'ADD_CATEGORY':
@@ -24,4 +17,4 @@ export const categories = (state = InitialState.categories, action) => {
     }
 };
 
-//* reducer
+export default categories;

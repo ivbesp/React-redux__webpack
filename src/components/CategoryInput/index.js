@@ -16,7 +16,6 @@ class CategoryInput extends Component{
         let cat_name = ReactDOM.findDOMNode(this.refs.category_add).value;
         let cat_enc = ReactDOM.findDOMNode(this.refs.category_enc).value;
         let cat_temp = ReactDOM.findDOMNode(this.refs.category_temp).checked;
-        console.log(cat_id+ ' '+ cat_name+ ' '+ cat_enc+ ' '+ cat_temp);
         addCategory(cat_id, cat_name, cat_enc, cat_temp);
     }
     render(){

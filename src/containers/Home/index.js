@@ -1,6 +1,6 @@
 import React, { Component }from 'react';
 import {connect} from 'react-redux';
-import * as actions from './../../actions';
+import actions from './../../actions/';
 import {bindActionCreators} from 'redux';
 import './style/style.scss';
 
@@ -13,7 +13,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    addCategory: bindActionCreators(actions.addCategory, dispatch),
+    addCategory: bindActionCreators(actions.categories.addCategory, dispatch),
 });
 
 class Home extends Component {

@@ -1,6 +1,7 @@
 import React, {Component, PropTypes } from 'react';
 
 import './style/style.scss';
+import Category from './../Category';
 
 const CategoriesList = ({categories}) => (
     <div className="categories-list">
@@ -11,10 +12,8 @@ const CategoriesList = ({categories}) => (
                 {categories.map((item, i) =>{
                         if (item.temp){
                             return (
-                                <div id={item.anchor_link} key={i}>
-                            <span>
-                                <b>{item.name}</b> — <a href={'#'+item.anchor_link}>{'#'+item.anchor_link}</a>
-                            </span>
+                                <div key={i} id={item.anchor_link}>
+                                    <Category anchor_link={item.anchor_link} name={item.name} />
                                 </div>
 
                             )
@@ -28,10 +27,8 @@ const CategoriesList = ({categories}) => (
                 {categories.map((item, i) =>{
                         if (!item.temp){
                             return (
-                                <div key={i} className="b-category">
-                            <span>
-                                <b>{item.name}</b> — <a href={'#'+item.anchor_link}>{'#'+item.anchor_link}</a>
-                            </span>
+                                <div key={i} id={item.anchor_link}>
+                                    <Category anchor_link={item.anchor_link} name={item.name} />
                                 </div>
                             )
 

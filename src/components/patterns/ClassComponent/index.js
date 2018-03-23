@@ -54,3 +54,5 @@ class Clock extends React.Component {
 }
 
 export default Clock;
+
+//О жизненных циклах компонента: https://reactjs.org/docs/react-component.html#lifecycle-methods
